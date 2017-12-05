@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+
+/*#66ff99 - OG Colour*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  font-family: 'Muli', sans-serif;
+}
+
+header {
+  width: 100vw;
+  height: 50rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroImage {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/Intro.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+nav {
+  width: 100vw;
+  position: absolute;
+  padding: 2vh 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+}
+
+.infoCircles {
+  width: 60px;
+  position: relative;
+  bottom: -2.5rem;
+  right: -14rem;
+}
+
+.navLinks {
+  cursor: pointer;
+}
+
+.navLinks a {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: inline-block;
+  margin: 1rem 0.5rem 0;
+  text-decoration: none;
+  color: #fff;
+  letter-spacing: 0px;
+  opacity: 1;
+  transition: 0.4s color;
+}
+
+.navLinks a:hover {
+  color: #66ff99;
+}
+
+section.infoblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+
+div.items {
+  width: 100%;
+}
+
+section h1, h2 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 0 auto;
+  letter-spacing: 0.1rem;
+}
+
+.button {
+  margin: 1rem auto;
+}
+
+.buttonText::before {
+  content: "";
+  background: #56d882;
+  width: 0%;
+  height: 42px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+.buttonText::after {
+  content: "";
+  background: #66ff99;
+  width: 0%;
+  height: 42px;
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+.bodyLink {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: .875em;
+  letter-spacing: 2px;
+  padding: 12px 20px;
+  background: hsla(0,0%,98%,0.3);
+  font-weight: 800;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.buttonArrow svg {
+  fill: #fff;
+  width: 30px;
+  position: absolute;
+  top: 3px;
+  right: -25px;
+  width: 35px;
+  height: 35px;
+  transition: 0.2s right ease-in-out;
+}
+
+.buttonTarget:hover .buttonArrow svg {
+  right: -32px;
+}
+
+.buttonTarget:hover .buttonText::before {
+  animation: 0.3s ease-in-out 0.15s buttonMask ;
+}
+
+.buttonTarget:hover .buttonText::after {
+  animation: 0.3s ease-in-out 0.1s buttonMask ;
+}
+
+@keyframes buttonMask {
+  0% {width: 0%;}
+  50% {width: 30%;}
+  100% {width: 0%; left: 100%;}
+}
+
+.contactBlock {
+  margin: 9rem 0 8rem 0;
+}
+
+.contactBlock .bodyLink {
+  background: hsla(0,0%,0%,0.07);
+}
+
+section#work, section#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: 'Muli', Helvetica, sans-serif;
+  background: #fff;
+  padding: 0;
+}
+
+section#contact {
+  padding: 1rem;
+}
+
+section#contact a {
+  font-style: italic;
+  text-decoration: none;
+  color: rgba(114,52,190, 0.85);
+  transition: 0.4s color;
+}
+
+section#contact a:hover {
+  color: #66ff99;
+}
+
+section#work h2 {
+  text-align: center;
+  font-weight: 900;
+  font-size: 2.5rem;
+  margin: 5rem 0;
+  color: #333;
+}
+
+section#work a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  text-align: center;
+  margin: 0.1rem 0;
+  width: 100%;
+  height: 20rem;
+  padding: 3rem 1rem;
+}
+
+section#work a h3 {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 900;
+  letter-spacing: 0rem;
+  margin: 0;
+}
+
+section#work a p {
+  font-size: 0.8rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  color: #66ff99;
+  margin: 0;
+}
+
+#work a.cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+#acres {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/Acres-Shot.jpg');
+}
+
+#trojans {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/Trojans-Cover.jpg');
+}
+
+#wildOnes {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/WildOnes-Cover.jpg');
+}
+
+#djSpin {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/DJ-Spin-Intro.jpg');
+}
+
+#caricatures {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/Caricature-Cover.jpg');
+}
+
+#interpretation {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/Interpretation-Cover.jpg');
+}
+
+#gotPortraits {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/GOT-Cover.jpg');
+}
+
+#cropped {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/coming-soon.jpg');
+}
+
+#vibrantPixels {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/Vibrant-Cover.jpg');
+}
+
+#camaro {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/Camaro-Cover.jpg');
+}
+
+#flashes {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/Flashes-Cover.jpg');
+}
+
+#awaken {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/Awaken-Cover.jpg');
+}
+
+#soon {
+  background: linear-gradient(-90deg,rgba(134,252,253, 0.85), rgba(114,52,190, 0.85)), url('assets/images/coming-soon.jpg');
+}
+
+/*-------------------------------- Footer --------------------------*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 6rem 1rem;
+  font-family: 'Muli', Helvetica, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 200;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  background: linear-gradient(90deg,rgba(134,252,253, 1), rgba(114,52,190, 1));
+}
+
+footer div.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 3rem;
+}
+
+footer a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+footer p {
+  opacity: 0.7;
+  margin: 0;
+}
+
+/*footer a img {
+  margin: 0 1rem;
+  width: 25px;
+  height: auto;
+  opacity: 0.7;
+  transition: 0.4s opacity;
+}*/
+
+footer .social a {
+  margin: 0 1rem;
+  opacity: 0.7;
+  transition: 0.4s opacity;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
+  letter-spacing: 0px;
+}
+
+.footerlogo {
+  width: 150px;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+@media all and (min-width: 500px){
+
+  nav {
+    padding: 2vh;
+    flex-direction: row;
+  }
+
+  .navLinks a {
+    font-size: 1rem;
+    transition: 0.4s color;
+  }
+
+  .infoCircles {
+    width: 60px;
+    position: relative;
+    bottom: 2.5rem;
+    right: 1.5rem;
+  }
+
+  section#work a h3 {
+    font-size: 4rem;
+    letter-spacing: 0rem;
+  }
+
+  section#work a p {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+  }
+
+}
+
+@media all and (min-width: 625px){
+
+
+  section h1, h2 {
+    font-size: 2rem;
+  }
+
+  .infoCircles {
+    width: 60px;
+    position: relative;
+    bottom: 2.5rem;
+    right: 1rem;
+  }
+
+}
+
+@media all and (min-width: 775px){
+
+  nav {
+    padding: 3rem 8%;
+
+  }
+
+  section h1, h2 {
+    font-size: 2.4rem;
+  }
+
+  .infoCircles {
+    width: 80px;
+    position: relative;
+    bottom: 2.5rem;
+    right: 1.5rem;
+  }
+
+  section#work a h3 {
+    font-size: 6rem;
+  }
+
+}
+
+@media all and (min-width: 1000px){
+
+  section h1, h2 {
+    font-size: 2.8rem;
+  }
+
+  .infoCircles {
+    width: 90px;
+    position: relative;
+    bottom: 2.5rem;
+    right: 1.5rem;
+  }
+
+  .contactBlock {
+    margin: 5rem 0 8rem 0;
+  }
+
+  section#work, section#contact {
+    padding: 3rem;
+  }
+
+  section#work a {
+    margin: 3rem 0;
+    width: 80%;
+    height: 30rem;
+    padding: 3rem 0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.2s ease-in-out;
+  }
+
+  section#work a:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+
+}
